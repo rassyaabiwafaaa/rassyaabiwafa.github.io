@@ -47,6 +47,7 @@ searchButton.addEventListener("click", function () {
 
       // ketika tombol detail di-klik
       const modalDetailButton = document.querySelectorAll(".modal-detail-button");
+
       modalDetailButton.forEach((btn) => {
         btn.addEventListener("click", function () {
           const imdbid = this.dataset.imdbid;

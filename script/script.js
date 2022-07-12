@@ -1,64 +1,97 @@
 const projects = [
   {
     id: 1,
+    gambar: "img/1.png",
     name: "Narama Mandiri",
     deskripsi: "ini adalah deksripsi untuk narama mandiri",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "#",
   },
   {
-    id: 1,
-    name: "Politeknik Kesehatan Genesis Medicare",
+    id: 2,
+    gambar: "img/2.png",
+    name: "Politeawoawaows Medicare",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "#",
   },
   {
-    id: 1,
+    id: 3,
+    gambar: "img/3.png",
     name: "Bogor Berwisata",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "#",
   },
   {
-    id: 1,
+    id: 4,
+    gambar: "img/4.png",
     name: "Game Suit Jawa",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "projects/gameSuitJawa/index.html",
   },
   {
-    id: 1,
+    id: 5,
+    gambar: "img/5.png",
     name: "Movie Searcher App",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "projects/movieFinder/index.html",
   },
   {
-    id: 1,
+    id: 6,
+    gambar: "img/6.png",
     name: "Weather App",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "projects/musicPlayer/index.html",
   },
   {
-    id: 1,
+    id: 7,
+    gambar: "img/7.png",
     name: "Music Player App",
     deskripsi: "",
-    url: "",
+    tools: "Html, CSS, Javascript",
+    url: "projects/weatherApp/index.html",
   },
 ];
 
-const testing = document.querySelector(".testing");
+const modalcontent = document.querySelector(".modal-content");
 
-const iseng = document.querySelector(".iseng");
+// harus tau setiap gambar yang di klik
+// setiapp gambar yang diklik itu nampilin data data dari gambar tersebut
 
-const tombol = document.querySelector(".tombol");
+// 1. tangkap dulu elemen gambar nya
+const gambar = document.querySelectorAll(".direct");
 
-tombol.addEventListener("click", function () {
-  let project = "";
-  projects.forEach((m) => {
-    project += showProject(m);
+gambar.forEach((gambarSatuan) => {
+  gambarSatuan.addEventListener("click", function () {
+    const project = projects[gambarSatuan.id];
+    let modal = "";
+    modal += showIsiModal(project);
+    modalcontent.innerHTML = modal;
   });
-  iseng.innerHTML = project;
 });
 
-function showProject(m) {
-  return `<h1>${m.name}</h1>
-            <h2>${m.deskripsi}</h2>
-            <h3><a href="${m.url}">go to page</a></h3>`;
+function showIsiModal(isi) {
+  return `<div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <img src="${isi.gambar}" class="thumb" alt="..." width="100px" />
+            </div>
+            <div class="row">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Project Name : </strong> ${isi.name} </li>
+                <li class="list-group-item"><strong>Project Description : </strong> ${isi.deskripsi} </li>
+                <li class="list-group-item"><strong><i class="bi bi-gear-fill"></i></strong> ${isi.tools} </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" onclick="window.location.href='${isi.url}'">View Live Demo</button>
+            <button type="button" class="btn btn-dark">View Source Code</button>
+          </div>`;
 }
