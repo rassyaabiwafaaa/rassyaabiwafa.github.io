@@ -45,7 +45,7 @@ const projects = [
     name: "Weather App",
     deskripsi: "",
     tools: "Html, CSS, Javascript",
-    url: "projects/musicPlayer/index.html",
+    url: "projects/weatherApp/index.html",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const projects = [
     name: "Music Player App",
     deskripsi: "",
     tools: "Html, CSS, Javascript",
-    url: "projects/weatherApp/index.html",
+    url: "projects/musicPlayer/index.html",
   },
 ];
 

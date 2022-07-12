@@ -44,7 +44,7 @@
 /* About Start */
 .about {
   padding-top: 30px;
-  height: 800px;
+  height: 810px;
 }
 
 .about img {
@@ -53,19 +53,13 @@
   width: 200px;
   border-radius: 50%;
   display: block;
-  box-shadow: 11px 6px 16px 3px rgba(0, 0, 0, 0.26);
-  -webkit-box-shadow: 11px 6px 16px 3px rgba(0, 0, 0, 0.26);
-  -moz-box-shadow: 11px 6px 16px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.13);
 }
 
-.profile-about {
-  width: 80vh;
-}
-
-@media only screen and (max-width: 600px) {
-  .profile-about {
-    width: 69vh;
-  }
+.about-desc {
+  padding: 0;
 }
 /* About End */
 
@@ -77,11 +71,19 @@
 }
 
 #projects .container {
-  margin-top: 40px;
+  margin-top: 45px;
 }
 
 #projects img {
   cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+#projects img:hover {
+  box-shadow: 0px 2px 5px 9px rgba(158, 154, 154, 0.13);
+  -webkit-box-shadow: 0px 2px 5px 9px rgba(158, 154, 154, 0.13);
+  -moz-box-shadow: 0px 2px 5px 9px rgba(158, 154, 154, 0.13);
 }
 /* Project End */
 
