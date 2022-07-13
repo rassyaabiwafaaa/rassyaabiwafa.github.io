@@ -44,7 +44,7 @@
 /* About Start */
 .about {
   padding-top: 30px;
-  height: 810px;
+  height: 750px;
 }
 
 .about img {
@@ -65,13 +65,14 @@
 
 /* Project Start */
 #projects {
+  padding-top: 0;
   background-color: rgb(30, 30, 30);
   color: white;
-  height: 760px;
+  height: 770px;
 }
 
 #projects .container {
-  margin-top: 45px;
+  margin-top: 50px;
 }
 
 #projects img {
