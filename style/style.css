@@ -86,6 +86,12 @@
   -webkit-box-shadow: 0px 2px 5px 9px rgba(158, 154, 154, 0.13);
   -moz-box-shadow: 0px 2px 5px 9px rgba(158, 154, 154, 0.13);
 }
+
+@media only screen and (max-width: 600px) {
+  #projects {
+    height: 100%;
+  }
+}
 /* Project End */
 
 /* Contact Start */
