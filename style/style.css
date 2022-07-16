@@ -89,7 +89,10 @@
 
 @media only screen and (max-width: 600px) {
   #projects {
-    height: 100%;
+    height: 110%;
+  }
+  #projects .container {
+    margin-top: 10px;
   }
 }
 /* Project End */
