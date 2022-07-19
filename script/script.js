@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     gambar: "img/2.png",
-    name: "Politeawoawaows Medicare",
+    name: "Politeknik Kesehatan Genesis Medicare",
     deskripsi: "",
     tools: "Html, CSS, Javascript",
     url: "projects/poltekkes/index.html",

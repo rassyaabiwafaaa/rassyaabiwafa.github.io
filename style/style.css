@@ -146,13 +146,25 @@
 
 .backtohome {
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
 }
 
 #back-to-home-button {
   border: none;
-  padding: 10px;
+  padding: 20px;
   color: white;
   background: #1e1e1e;
   border-radius: 10px;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+#back-to-home-button:hover {
+  background-color: white;
+  color: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
+  -webkit-box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
+  -moz-box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
 }
