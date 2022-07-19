@@ -141,3 +141,18 @@
   border: 5px solid rgba(30, 30, 30, 0.1);
 }
 /* Modal End */
+
+/* Button Back to Home */
+
+.backtohome {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#back-to-home-button {
+  border: none;
+  padding: 10px;
+  color: white;
+  background: #1e1e1e;
+  border-radius: 10px;
+}
