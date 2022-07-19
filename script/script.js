@@ -1,22 +1,14 @@
 const projects = [
   {
     id: 1,
-    gambar: "img/1.png",
-    name: "Narama Mandiri",
-    deskripsi: "ini adalah deksripsi untuk narama mandiri",
-    tools: "Html, CSS, Javascript",
-    url: "#",
-  },
-  {
-    id: 2,
     gambar: "img/2.png",
     name: "Politeawoawaows Medicare",
     deskripsi: "",
     tools: "Html, CSS, Javascript",
-    url: "#",
+    url: "projects/poltekkes/index.html",
   },
   {
-    id: 3,
+    id: 2,
     gambar: "img/3.png",
     name: "Bogor Berwisata",
     deskripsi: "",
@@ -24,15 +16,15 @@ const projects = [
     url: "#",
   },
   {
-    id: 4,
+    id: 3,
     gambar: "img/4.png",
-    name: "Game Suit Jawa",
-    deskripsi: "",
+    name: "Game Suit",
+    deskripsi: "a simple game that let you pick 1 of 3 choice and computer will pick the same thing, but randomly, and the program decide who win, this game similiar with Rock, Paper,Scissor but in Indonesia version",
     tools: "Html, CSS, Javascript",
     url: "projects/gameSuitJawa/index.html",
   },
   {
-    id: 5,
+    id: 4,
     gambar: "img/5.png",
     name: "Movie Searcher App",
     deskripsi: "",
@@ -40,18 +32,18 @@ const projects = [
     url: "projects/movieFinder/index.html",
   },
   {
-    id: 6,
+    id: 5,
     gambar: "img/6.png",
     name: "Weather App",
-    deskripsi: "",
+    deskripsi: "an App that allow you to know what weather condisition at some place, the information include the weather, temp, and humidity",
     tools: "Html, CSS, Javascript",
     url: "projects/weatherApp/index.html",
   },
   {
-    id: 7,
+    id: 6,
     gambar: "img/7.png",
     name: "Music Player App",
-    deskripsi: "",
+    deskripsi: "Music player that base on website, and like usual music player, this App can be play next and previous song, shuffle, and replay and build by HTML, CSS, and Javascript",
     tools: "Html, CSS, Javascript",
     url: "projects/musicPlayer/index.html",
   },
@@ -75,23 +67,47 @@ gambar.forEach((gambarSatuan) => {
 });
 
 function showIsiModal(isi) {
-  return `<div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row justify-content-center">
-              <img src="${isi.gambar}" class="thumb" alt="..." width="100px" />
+  if (isi.id == 2) {
+    return `<div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="row">
-              <ul class="list-group">
-                <li class="list-group-item"><strong>Project Name : </strong> ${isi.name} </li>
-                <li class="list-group-item"><strong>Project Description : </strong> ${isi.deskripsi} </li>
-                <li class="list-group-item"><strong><i class="bi bi-gear-fill"></i></strong> ${isi.tools} </li>
-              </ul>
+            <div class="modal-body">
+              <div class="row justify-content-center">
+                <img src="${isi.gambar}" class="thumb" alt="..." width="100px" />
+              </div>
+              <div class="row">
+                <ul class="list-group">
+                  <li class="list-group-item"><strong>Project Name : </strong> ${isi.name} </li>
+                  <li class="list-group-item"><strong>Project Description : </strong> ${isi.deskripsi} </li>
+                  <li class="list-group-item"><strong><i class="bi bi-gear-fill"></i></strong> ${isi.tools} </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" onclick="window.location.href='${isi.url}'">View Live Demo</button>
-            <button type="button" class="btn btn-dark">View Source Code</button>
-          </div>`;
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" onclick="window.location.href='${isi.url}'">View Source Code</button>
+            </div>`;
+  } else {
+    return `<div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center">
+                <img src="${isi.gambar}" class="thumb" alt="..." width="100px" />
+              </div>
+              <div class="row">
+                <ul class="list-group">
+                  <li class="list-group-item"><strong>Project Name : </strong> ${isi.name} </li>
+                  <li class="list-group-item"><strong>Project Description : </strong> ${isi.deskripsi} </li>
+                  <li class="list-group-item"><strong><i class="bi bi-gear-fill"></i></strong> ${isi.tools} </li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" onclick="window.location.href='${isi.url}'">View The Project</button>
+            </div>`;
+  }
+}
+
+if (window.innerWidth < 500) {
+  document.body.style.backgroundColor = "blue";
 }
