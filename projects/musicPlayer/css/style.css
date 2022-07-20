@@ -181,3 +181,30 @@ i.fa-step-backward {
 .stroke:nth-child(7) {
   animation-delay: 0s;
 }
+
+/* Button Back to Home */
+
+.backtohome {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  padding: 30px;
+}
+
+#back-to-home-button {
+  border: none;
+  padding: 20px;
+  color: white;
+  background: #1e1e1e;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+#back-to-home-button:hover {
+  background-color: white;
+  color: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
+  -webkit-box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
+  -moz-box-shadow: 6px 7px 21px 8px rgba(181, 178, 178, 1);
+}
